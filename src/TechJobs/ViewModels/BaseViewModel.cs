@@ -1,27 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using TechJobs.Models;
 
 namespace TechJobs.ViewModels
 {
-    public class JobFieldsViewModel : BaseViewModel
+    public class BaseViewModel
     {
-       // TODO #7.2 - Extract members common to SearchJobsViewModel
-        // to BaseViewModel
-
         // The current column
         public JobFieldType Column { get; set; }
 
         // All fields in the given column
         public IEnumerable<JobField> Fields { get; set; }
 
-        /*// All columns, for display
+        // All columns, for display
         public List<JobFieldType> Columns { get; set; }
 
         // View title
         public string Title { get; set; } = "";
 
-        public JobFieldsViewModel()
+        public BaseViewModel()
         {
             // Populate the list of all columns
 
@@ -33,6 +32,10 @@ namespace TechJobs.ViewModels
             }
 
 
-        }*/
+        }
+        
     }
+
+
 }
+
